@@ -10,9 +10,22 @@ import UploadRoute from './routes/UploadRoutes.js';
 
 dotenv.config();
 
+
+
+
 //MIDDLEWARES
 const app = express();
-app.use(cors());
+
+
+const corsOptions = {
+  origin: '*', // Allow requests from all domains
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Specify allowed HTTP methods
+  credentials: true, // Allow credentials (cookies, authorization headers)
+};
+
+
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.static('public'));
 
