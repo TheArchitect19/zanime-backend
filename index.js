@@ -19,7 +19,11 @@ const cors = microCors({
   credentials: true, // Allow credentials (cookies, authorization headers)
 });
 
-app.use(cors); // Use micro-cors as middleware
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(express.json());
 
 
