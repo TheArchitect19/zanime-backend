@@ -18,7 +18,7 @@ const app = express();
 
 
 const corsOptions = {
-  origin: '*', // Allow requests from all domains
+  origin: 'https://zanime-frontend.vercel.app', // Allow requests from all domains
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Specify allowed HTTP methods
   credentials: true, // Allow credentials (cookies, authorization headers)
 };
