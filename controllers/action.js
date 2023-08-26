@@ -3,7 +3,12 @@ import ImageModel from "../models/image.js";
 
 // server status
 export const status = (req, res) => {
-    res.status(200).send('I am alive');
+    try {
+        res.status(200).send('I am alive');
+    } catch (error) {
+        res.status(500).send({ error: "server is dead" });
+    }
+    
 }
 
 
