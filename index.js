@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import multer from 'multer';
 import path from 'path';
 import dotenv from 'dotenv';
-import microCors from 'micro-cors'; // Import micro-cors
+import cors from 'cors';
 
 import UploadRoute from './routes/UploadRoutes.js';
 
