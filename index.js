@@ -1,12 +1,14 @@
 //IMPORTS
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const multer= require('multer');
-const path = require('path');
-require('dotenv').config();
-const ImageModel = require('./models/image');
-const UploadRoute = require('./routes/UploadRoutes')
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import multer from 'multer';
+import path from 'path';
+import dotenv from 'dotenv';
+
+import UploadRoute from './routes/UploadRoutes.js';
+
+dotenv.config();
 
 //MIDDLEWARES
 const app = express();
@@ -28,4 +30,4 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 
 
 // Export the Express API
-module.exports = app
+export default app;
