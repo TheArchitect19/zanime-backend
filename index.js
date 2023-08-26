@@ -30,9 +30,13 @@ app.use(express.json());
 // ROUTES
 app.use(UploadRoute);
 
+
+const PORT = 6969 ;
+const MONGO_URI ="mongodb+srv://Batman:Ayush1907@cluster0.gq3kj0c.mongodb.net/Images"
+
 // DATABASE CONNECTION
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => app.listen(process.env.PORT, () => console.log(`Server Running on Port: http://localhost:${process.env.PORT}`)))
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
 
 // Export the Express API
