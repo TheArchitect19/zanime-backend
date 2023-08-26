@@ -37,7 +37,7 @@ export const fill = async (req,res)=>{
         res.status(200).json(allimg);
     } catch (error) {
         console.error("Error fetching images:", error);
-        res.status(500).json({ error: "Internal Server Error" });
+        res.status(500).json({ error: "server is dead" });
     }
 }
 
