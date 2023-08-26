@@ -6,7 +6,7 @@ const router = Router();
 
 router.get('/api/fill', async (req,res)=>{
     const allimg = await ImageModel.find().sort({createdAt :"descending"})
-    res.status(200).json(allimg)
+    // res.status(200).json(allimg)
     res.status(200).json("hello")
 })
 
