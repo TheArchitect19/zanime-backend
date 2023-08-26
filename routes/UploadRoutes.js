@@ -10,7 +10,8 @@ router.get('/api/fill', async (req,res)=>{
     res.status(200).json("hello")
 })
 
-router.get('/home', (req, res) => {
+router.get('/home', async (req, res) => {
+ const allimg = await ImageModel.find().sort({createdAt :"descending"})
   res.status(200).json('Welcome, your app is working well');
 })
 
