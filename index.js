@@ -13,11 +13,11 @@ dotenv.config();
 // MIDDLEWARES
 const app = express();
 
-const cors = microCors({
-  origin: 'https://zanime-frontend.vercel.app', // Allow requests from the specified domain
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Specify allowed HTTP methods
-  credentials: true, // Allow credentials (cookies, authorization headers)
-});
+// const cors = microCors({
+//   origin: 'https://zanime-frontend.vercel.app', // Allow requests from the specified domain
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Specify allowed HTTP methods
+//   credentials: true, // Allow credentials (cookies, authorization headers)
+// });
 
 app.use(
   cors({
