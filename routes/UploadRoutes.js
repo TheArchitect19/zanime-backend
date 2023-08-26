@@ -5,9 +5,13 @@ const ImageModel = require('../models/image');
 const router = Router();
 
 router.get('/api/fill', async (req,res)=>{
-    const allimg = await ImageModel.find().sort({createdAt :"descending"})
-    res.status(200).send(allimg)
-    res.status(200).json("hello")
+    try {
+        const allimg = await ImageModel.find().sort({ createdAt: "descending" });
+        res.status(200).json(allimg);
+    } catch (error) {
+        console.error("Error fetching images:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
 })
 
 router.get('/home', (req, res) => {
