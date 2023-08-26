@@ -14,8 +14,8 @@ router.get('/api/fill', async (req,res)=>{
     }
 })
 
-router.get('/home', (req, res) => {
-  res.status(200).json('Welcome, your app is working well');
+router.get('/', (req, res) => {
+  res.status(200).send('Welcome, your app is working well');
 })
 
 router.post('/api/save',upload.single('file') ,(req,res)=>{
