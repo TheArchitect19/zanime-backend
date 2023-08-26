@@ -21,7 +21,7 @@ const cors = microCors({
 
 app.use(cors); // Use micro-cors as middleware
 app.use(express.json());
-app.use(express.static('public'));
+
 
 // ROUTES
 app.use(UploadRoute);
